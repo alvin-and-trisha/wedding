@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+ng build --output-path dist --base-href 
+
+this is for ssh keygen
+## make sure you're in the ssh directory (this one is using cmd)
+cd %userprofile%\.ssh 
+
+## generate keygen (using gitbash for this and below)
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+## add your key to the ssh agent
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa
+
+## for deployment, make sure you are in the repo dir
+ngh --dir=dist/browser --no-silent
+
+
+
+
