@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        greatvibes: ['"Great Vibes"', 'cursive'], // Add the 'Great Vibes' font
+      }
+    },
   },
   plugins: [],
 }
